@@ -37,7 +37,8 @@ jobs:
             HostName ${{ secrets.SSH_HOST }}
             User ${{ secrets.SSH_USER }}
             IdentityFile ~/.ssh/id_rsa
-            ProxyCommand cloudflared access ssh --hostname {{ secrets.SSH_HOST }}
+            ProxyCommand cloudflared access ssh --hostname %h
+            StrictHostKeyChecking no
           EOF
 
 
