@@ -25,6 +25,11 @@ jobs:
           tags: |
             ${{ secrets.IMAGE_NAME }}:latest
             ${{ secrets.IMAGE_NAME }}:${{ github.sha }}
+          
+      - name: Install cloudflared
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cloudflared
 
       - name: Setup SSH (Cloudflared)
         run: |
