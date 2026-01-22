@@ -21,7 +21,7 @@ async def root(request: Request):
 
 @app.post("/", response_class=HTMLResponse)
 async def update_message(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request, "message": "Hello from the backend!"})
+    return templates.TemplateResponse("index.html", {"request": request, "message": "This is CI/CD pipeline demo!"})
 
 if __name__ == "__main__":
     import uvicorn
