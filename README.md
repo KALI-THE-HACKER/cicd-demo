@@ -1,6 +1,6 @@
 # CICD Demo
 
-Simple FastAPI application with server-side rendering.
+Simple FastAPI application with server-side rendering for CI/CD demonstration.
 
 ## Setup
 
